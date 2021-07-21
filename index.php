@@ -19,18 +19,18 @@ $bonnets = [
         'description' => "Jaune"
     ],
     2 => [
-        'designation' => 'Bonnet en laine', 
-        'prix' => 10,
+        'designation' => 'Bonnet en laine bio', 
+        'prix' => 15,
         'description' => "Bleu"
     ],
     3 => [
-        'designation' => 'Bonnet en laine', 
-        'prix' => 10,
+        'designation' => 'Bonnet en laine et cachemire', 
+        'prix' => 20,
         'description' => "Vert"
     ],
     4 => [
-        'designation' => 'Bonnet en laine', 
-        'prix' => 10,
+        'designation' => 'Bonnet arc-en-ciel', 
+        'prix' => 18,
         'description' => "Violet"
     ]
     // 1 => 'Bonnet en laine', 
@@ -40,7 +40,7 @@ $bonnets = [
     ];
 
 
-print_r($bonnets);
+//print_r($bonnets);
 
 ?>
 <br>
@@ -50,21 +50,37 @@ print_r($bonnets);
             <th colspan="2">id</th>
             <th colspan="2">Désignation</th>
             <th colspan="2">Prix</th>
-            <th colspan="2">Désignation</th>
+            <th colspan="2">description</th>
         </tr>
         
     </thead>
     <tbody>
         <?php
         foreach($bonnets as $i => $item){
-            echo '<tr>
-                    <td  colspan="2">'.$i.'</td> 
-                    <td colspan="2"> '.$item['designation'].' </td>
-                    <td colspan="2">'.$item['prix'].'</td>
-                    <td colspan="2">'.$item['description'].'</td>
-                  <tr>';
-        }
-        ?>
+            $color = '';
+
+            if( $item['prix'] <= 12){
+                $color ='green';
+            } else {
+                $color ='red';
+            }
+
+            ?>
+
+
+           <tr>
+                    <td  colspan="2"><?= $i?> </td> 
+                    <td colspan="2"><?= $item['designation'] ?> </td>
+
+                    <td style="color: <?php echo $color ?>;" colspan="2"><?= $item['prix'] ?> </td>
+                    <td colspan="2"><?= $item['description'] ?> </td>
+            <tr>
+
+        <?php
+            }
+        ?>               
+        
+
     </tbody>
 </table>
 
