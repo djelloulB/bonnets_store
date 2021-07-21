@@ -68,11 +68,8 @@ $bonnets = [
             return $prixTtc /1.2;
         }
 
-       
-
-
-        //Exercice 3
-        foreach($bonnets as $i => $item){
+        //exercice 5
+        function displayItem($i,$item){
             $color = '';
 
             if( $item['prix'] <= 12){
@@ -94,8 +91,15 @@ $bonnets = [
 
                     <td colspan="2"><?= $item['description'] ?> </td>
             <tr>
+                <?php
+        }
 
-        <?php
+
+        //Exercice 3
+        foreach($bonnets as $i => $item){
+            
+            displayItem($i, $item);
+        
             }
 
 
