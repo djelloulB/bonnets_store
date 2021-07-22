@@ -8,7 +8,7 @@
             <?php
                 include_once('includes/cards.php');
             ?>
-        <a href="includes/list.php">Voir toute la liste</a>
+        <a href="list.php">Voir toute la liste</a>
     </div>
     
 </div>

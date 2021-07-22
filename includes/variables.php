@@ -1,5 +1,11 @@
 <?php
 
+$email = 'toto@fr.fr';
+$mdp = 'toto';
+
+// define('EMAIL','toto@fr.fr');
+// define('MDP', 'toto');
+
 
 $bonnets = [
     1 => [
@@ -27,3 +33,5 @@ $bonnets = [
         'image' => 'arc-en-ciel'
     ]
     ];
+
+

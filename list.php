@@ -1,6 +1,6 @@
 
 <?php 
-    include('header.php');
+    include('includes/header.php');
 ?>
 
 <table class="table">
@@ -11,6 +11,7 @@
             <th colspan="2">Prix HT</th>
             <th colspan="2">Prix TTC</th>
             <th colspan="2">Description</th>
+            <th colspan="2">Image</th>
         </tr>
         
     </thead>
@@ -31,5 +32,5 @@
 
 
 <?php
-    include_once('footer.php');
+    include_once('includes/footer.php');
 ?>
