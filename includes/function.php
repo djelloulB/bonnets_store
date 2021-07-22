@@ -1,6 +1,6 @@
 <?php
 
-include('variables.php');
+include('includes/variables.php');
 
 function prixHt( $prixTtc){
     return $prixTtc /1.2;
@@ -15,8 +15,6 @@ function displayItem($i,$item){
     } else {
         $color ='red';
     }
-
-    
 
     ?>
 
