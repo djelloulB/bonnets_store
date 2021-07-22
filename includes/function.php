@@ -24,8 +24,8 @@ function displayItem($i,$item){
             <td colspan="2"><?= number_format( prixHt($item['prix']), 2) ?> €</td>
             <td style="color: <?= $color ?>;" 
             colspan="2"><?= $item['prix'] ?> €</td>
-
             <td colspan="2"><?= $item['description'] ?> </td>
+            <td colspan="2"><img width="90px" src="src/img/<?= $item['image'] ?> " alt=""> </td>
     <tr>
         <?php
 }

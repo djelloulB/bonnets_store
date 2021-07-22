@@ -1,7 +1,7 @@
 <?php
     include_once('variables.php');
     include_once('function.php');
-
+   
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,24 @@
 
 </head>
 <body>
-    
+    <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.php">B.store</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+        <a class="nav-link" href="list.php">Tous les bonnets</a>
+      </div>
+      <div class="nav-bar">
+         <p>L'utilisateur:  <?php  if(isset($user)) {
+             echo $user;
+         } ?> est connecté</p>
+      </div>
+    </div>
+  </div>
+</nav>
+    </header>
 <div class="container">
 <h1 class="text-center">Bonnets Store</h1>
 <p class="text-center"> <?php echo date('d-m-d H:i:s');?> </p> 
