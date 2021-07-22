@@ -1,6 +1,6 @@
 <?php
-    include_once('includes/variables.php');
-    include_once('includes/function.php');
+    include_once('variables.php');
+    include_once('function.php');
 
 ?>
 

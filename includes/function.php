@@ -1,6 +1,6 @@
 <?php
 
-include('includes/variables.php');
+include('variables.php');
 
 function prixHt( $prixTtc){
     return $prixTtc /1.2;
@@ -22,7 +22,7 @@ function displayItem($i,$item){
             <td  colspan="2"><?= $i?> </td> 
             <td colspan="2"><?= $item['designation'] ?> </td>
             <td colspan="2"><?= number_format( prixHt($item['prix']), 2) ?> €</td>
-            <td style="color: <?php echo $color ?>;" 
+            <td style="color: <?= $color ?>;" 
             colspan="2"><?= $item['prix'] ?> €</td>
 
             <td colspan="2"><?= $item['description'] ?> </td>
