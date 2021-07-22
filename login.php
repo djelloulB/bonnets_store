@@ -1,11 +1,21 @@
 <?php 
+include_once('includes/header.php');
 
+
+//On verifie si l'email et le mdp
 if(isset($_POST['email']) && isset($_POST['pwd']))  {
     if(!empty($_POST['pwd']) && !empty($_POST['email'])){
-        $user = $_POST['email'];   
+        
+        if($_POST['email'] == $email && $_POST['pwd'] == $pwd){
+            $user = $_POST['email'];
+            $_SESSION['user'] = $user;
+            header('Location: index.php');
+        } else {
+            echo "l'utisateur n'est pas connu !";
+        }
     }
 }
-include_once('includes/header.php');
+
 
 ?>
 <div class="bgcolor" >

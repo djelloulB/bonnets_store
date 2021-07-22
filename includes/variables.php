@@ -1,7 +1,7 @@
 <?php
 
 $email = 'toto@fr.fr';
-$mdp = 'toto';
+$pwd = 'toto';
 
 // define('EMAIL','toto@fr.fr');
 // define('MDP', 'toto');
