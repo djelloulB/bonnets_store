@@ -11,7 +11,7 @@ if(isset($_POST['email']) && isset($_POST['pwd']))  {
             $_SESSION['user'] = $user;
             header('Location: index.php');
         } else {
-            echo "l'utisateur n'est pas connu !";
+            echo "<div  class='bg-danger bg-gradient col-6 p-3 mx-auto my-3 rounded text-white text-center'>l'email ou votre mot de passe est incorrect !</div>";
         }
     }
 }

@@ -1,9 +1,10 @@
 <?php
-
+    $length = count($bonnets);
 //foreach($bonnets as $i => $item){
-    for($i = 1; $i <= 3 ; $i++){
+
+    for($i = 1; $i <= $length ; $i++){
+       
 ?>
-    
     <div class="col-4">
         <div class="card shadow" style="width: 18rem;">
         <img src="src/img/<?= $bonnets[$i]['image'] ?>" class="card-img-top" alt="...">
@@ -14,8 +15,10 @@
         </div>
         </div>
     </div>          
-  <?php          
-        
+    <?php          
+        if($i == 3) {
+            break;
         }
 
-?>
+        }
+    ?>
