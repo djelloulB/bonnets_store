@@ -1,0 +1,11 @@
+#toast {
+  display: block;
+}
+.fa,
+.fas {
+  font-size: 20px;
+}
+#toast {
+  
+  transition: 0.5s;
+}
