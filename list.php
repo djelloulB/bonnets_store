@@ -3,7 +3,7 @@
     include('includes/header.php');
 ?>
 
-<table class="table">
+<table class="table shadow">
     <thead>
         <tr class="table-dark">
             <th  colspan="2">#</th>

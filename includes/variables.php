@@ -1,4 +1,7 @@
 <?php
+
+use Factory\BeanieFactory;
+
 require_once('config.inc.php');
 $email = 'toto@fr.fr';
 $pwd = 'toto';
@@ -10,6 +13,10 @@ $pdoStatement = $connection->prepare($sql);
 $success = $pdoStatement->execute();
 
 $results = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
-//exit(var_dump($results));
-
-$bonnets = $results;
+$bonnets = [];
+$factory = new BeanieFactory();
+foreach ($results as $bonnet) {
+    $bonnets[] = $factory->create($bonnet);
+    
+}
+//exit(var_dump($bonnets));
