@@ -5,7 +5,6 @@ if (isset($_POST['email'])) {
     //fonction de verification email
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         echo "L'adresse email est considérée comme valide.";
-        var_dump($_POST);
     }
 
     //requetes d'insertion
@@ -16,7 +15,6 @@ if (isset($_POST['email'])) {
     $sujet = $_POST['subject'];
     $message =  $_POST['message'];
     $email = $_POST['email'];
-
     $pdoStatement->bindParam(':subject', $sujet);
     $pdoStatement->bindParam(':message', $message);
     $pdoStatement->bindParam(':email', $email);

@@ -1,10 +1,20 @@
 <?php
 
+namespace Factory;
 
-class Beanie
+use Beanie;
+
+
+class BeanieFactory
 {
-    protected $designation;
-    protected $prix;
-    protected $image;
-    protected $description;
+    public function create($data)
+    {
+        $bonnet = new Beanie();
+        $bonnet->setDesignation($data['designation']);
+        $bonnet->setPrix($data['prix']);
+        $bonnet->setImage($data['image']);
+        $bonnet->setDescription($data['description']);
+
+        return $bonnet;
+    }
 }

@@ -1,4 +1,7 @@
 <?php
+spl_autoload_register(function ($class) {
+    require_once "classes/$class.php";
+});
 session_start();
 //require_once('includes/config.inc.php');
 include_once('variables.php');

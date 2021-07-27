@@ -12,7 +12,7 @@ function displayItem($i, $item)
 {
     $color = '';
 
-    if ($item['prix'] <= 12) {
+    if ($item->getPrix() <= 12) {
         $color = 'green';
     } else {
         $color = 'red';
@@ -21,12 +21,12 @@ function displayItem($i, $item)
 ?>
 
     <tr>
-        <td colspan="2"><?= $item['id'] ?> </td>
-        <td colspan="2"><?= $item['designation'] ?> </td>
-        <td colspan="2"><?= number_format(prixHt($item['prix']), 2) ?> €</td>
-        <td style="color: <?= $color ?>;" colspan="2"><?= $item['prix'] ?> €</td>
-        <td colspan="2"><?= $item['description'] ?> </td>
-        <td colspan="2"><img width="90px" src="src/img/<?= $item['image'] ?> " alt="<?= $item['designation'] ?>"> </td>
+        <td colspan="2"><?= $item->getId(); ?> </td>
+        <td colspan="2"><?= $item->getDesignation();  ?> </td>
+        <td colspan="2"><?= number_format(prixHt($item->getPrix()), 2) ?> €</td>
+        <td style="color: <?= $color ?>;" colspan="2"><?= $item->getPrix() ?> €</td>
+        <td colspan="2"><?= $item->getDescription();?> </td>
+        <td colspan="2"><img width="90px" src="src/img/<?= $item->getImage() ;?> " alt="<?= $item->getDesignation();?>"> </td>
     <tr>
     <?php
 }
