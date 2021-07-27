@@ -1,6 +1,6 @@
 
 <?php 
-    include('includes/header.php');
+   // include('includes/header.php');
 ?>
 
 <table class="table shadow">

@@ -1,5 +1,5 @@
 <?php 
-include_once('includes/header.php');
+//include_once('includes/header.php');
 
 
 //On verifie si l'email et le mdp
@@ -9,7 +9,7 @@ if(isset($_POST['email']) && isset($_POST['pwd']))  {
         if($_POST['email'] == $email && $_POST['pwd'] == $pwd){
             $user = $_POST['email'];
             $_SESSION['user'] = $user;
-            header('Location: index.php');
+            header('Location: index.php?page=home');
         } else {
             echo "<div  class='bg-danger bg-gradient col-6 p-3 mx-auto my-3 rounded text-white text-center'>l'email ou votre mot de passe est incorrect !</div>";
         }
@@ -19,7 +19,7 @@ if(isset($_POST['email']) && isset($_POST['pwd']))  {
 
 ?>
 <div class="bgcolor" >
-    <form action="login.php" method="post" class="mx-auto col-6 shadow p-5">
+    <form action="" method="post" class="mx-auto col-6 shadow p-5">
     <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
         <input required type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
