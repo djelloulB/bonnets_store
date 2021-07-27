@@ -1,5 +1,5 @@
 <?php
-include_once('includes/header.php');
+//include_once('includes/header.php');
 
 if (isset($_POST['email'])) {
     //fonction de verification email

@@ -31,8 +31,8 @@ include_once('function.php');
                 <a class="navbar-brand" href="index.php">B.store</a>
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
-                    <a class="nav-link" href="list.php">Tous les bonnets</a>
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link" href="index.php?page=list">Tous les bonnets</a>
+                    <a class="nav-link" href="index.php?page=contact">Contact</a>
                 </div>
                 <div class="nav-bar">
                     <div class="align-top d-flex">
@@ -47,9 +47,9 @@ include_once('function.php');
                         <div class="text-center">
                             <?php
                             if (isset($_SESSION['user'])) {
-                                echo ' <a href="logout.php" class="p-0 nav-link"><i class="fas fa-sign-out-alt"></i> <br>Se déconnecteur </a>';
+                                echo ' <a href="index.php?page=logout" class="p-0 nav-link"><i class="fas fa-sign-out-alt"></i> <br>Se déconnecteur </a>';
                             } else {
-                                echo ' <a href="login.php" class="p-0 mx-2 nav-link"><i class="fas fa-user"></i><br>S\'identifier </a>';
+                                echo ' <a href="index.php?page=login" class="p-0 mx-2 nav-link"><i class="fas fa-user"></i><br>S\'identifier </a>';
                             }
 
                             ?>
