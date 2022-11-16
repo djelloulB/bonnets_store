@@ -1,2 +1,2 @@
 # bonnets_store
-Site E-commerce de bonnets
+Beanies e-commerce web-site
